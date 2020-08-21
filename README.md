@@ -1,3 +1,3 @@
-# FYS3150-Prosjekt1
+# FYS3150
 
 
