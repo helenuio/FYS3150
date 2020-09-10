@@ -92,7 +92,7 @@ int main(int argc, char* argv[])
     // write to file for easier plotting
     ofile << setiosflags(ios::showpoint | ios::uppercase);
     //      ofile << "       x:             approx:          exact:       relative error" << endl;
-    for (int i = 1; i <= n; i++)
+    for (int i = 1; i <= n-1; i++)
     {
       double xval = x[i];
       double RelativeError = fabs((exact(xval)-u[i])/exact(xval));
@@ -107,9 +107,9 @@ int main(int argc, char* argv[])
     delete [] c; delete [] u; delete [] g;
 
     finish = clock();
-    double time = (finish - start);
+    double timeused = (double) (finish - start)/(CLOCKS_PER_SEC );
     cout << setw(5) << n;
-    cout << setw(15) << time/CLOCKS_PER_SEC << endl;
+    cout << setw(15) << timeused << endl;
   } // closing function looping over n=0,1,2
 return 0;
 } // closing main function

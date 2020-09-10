@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 
-myfile = open("b-fil3", "r")
+myfile = open("c-file1", "r")
 
 n = []
 e = []
